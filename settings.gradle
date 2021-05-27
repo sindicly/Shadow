@@ -12,6 +12,8 @@ includeBuild 'projects/sdk/dynamic'
 
 includeTest()
 includeSample()
+//includeSunFlower()
+
 
 def includeTest() {
     include 'test-dynamic-host',
@@ -79,4 +81,20 @@ def includeSample() {
     project(':sample-app-lib').projectDir = file('projects/sample/source/sample-plugin/sample-app-lib')
     project(':sample-normal-app').projectDir = file('projects/sample/source/sample-plugin/sample-normal-app')
     project(':sample-plugin-app').projectDir = file('projects/sample/source/sample-plugin/sample-plugin-app')
+}
+
+def includeSunFlower() {
+    include 'introduce-shadow-lib',
+            'sample-host',
+            'sample-manager',
+            'sample-loader',
+            'sample-runtime',
+            'app'
+    project(':introduce-shadow-lib').projectDir = file('projects/sample/sunflower/host-project/introduce-shadow-lib')
+    project(':sample-host').projectDir = file('projects/sample/sunflower/host-project/sample-host')
+    project(':sample-manager').projectDir = file('projects/sample/sunflower/manager-project/sample-manager')
+    project(':sample-loader').projectDir = file('projects/sample/sunflower/plugin-project/sample-loader')
+    project(':sample-runtime').projectDir = file('projects/sample/sunflower/plugin-project/sample-runtime')
+    project(':app').projectDir = file('projects/sample/sunflower/plugin-project/app')
+
 }
