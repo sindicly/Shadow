@@ -32,6 +32,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
+import androidx.lifecycle.LiveData;
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.ryg.expandable.ui.PinnedHeaderExpandableListView;
 import com.ryg.expandable.ui.PinnedHeaderExpandableListView.OnHeaderUpdateListener;
@@ -58,7 +60,6 @@ public class MainActivity extends Activity implements
 
     private ExpandableListAdapter adapter;
     private UseCaseSummaryFragment caseSummaryFragment;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -23,14 +23,18 @@ android {
     lintOptions {
         abortOnError false
     }
+
 }
 
 dependencies {
     implementation project(":slidingmenu")
     implementation project(":pinnedheaderexpandablelistview")
-    implementation 'com.android.support:support-annotations:28.0.0'
+    /*implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'*/
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 
     def lifecycle_version='2.2.0-alpha01'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"

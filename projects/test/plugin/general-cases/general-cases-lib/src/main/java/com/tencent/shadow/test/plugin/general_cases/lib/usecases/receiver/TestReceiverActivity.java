@@ -18,16 +18,14 @@
 
 package com.tencent.shadow.test.plugin.general_cases.lib.usecases.receiver;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.tencent.shadow.test.plugin.general_cases.lib.R;

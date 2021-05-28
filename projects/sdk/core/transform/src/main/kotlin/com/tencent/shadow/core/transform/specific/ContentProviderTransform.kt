@@ -39,7 +39,7 @@ class ContentProviderTransform : SpecificTransform() {
         val shadowUriMethod = mClassPool[ShadowUriClassname].methods!!
 
         val method_parse = uriMethod.filter { it.name == "parse" }
-        val shadow_method_parse = shadowUriMethod.filter { it.name == "parse" }!!
+        val shadow_method_parse = shadowUriMethod.filter { it.name == "parse" }
         val codeConverter = CodeConverter()
 
         for (ctAndroidMethod in method_parse) {

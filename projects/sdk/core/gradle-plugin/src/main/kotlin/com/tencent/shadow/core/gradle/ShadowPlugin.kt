@@ -20,6 +20,7 @@ package com.tencent.shadow.core.gradle
 
 import com.android.build.gradle.AppPlugin
 import com.android.build.gradle.BaseExtension
+import com.android.builder.model.Version.*
 import com.tencent.shadow.core.gradle.extensions.PackagePluginExtension
 import com.tencent.shadow.core.transform.ShadowTransform
 import com.tencent.shadow.core.transform_kit.AndroidClassPoolBuilder
@@ -89,14 +90,15 @@ class ShadowPlugin : Plugin<Project> {
         var useHostContext: Array<String> = emptyArray()
     }
 
-    fun getBaseExtension(project: Project): BaseExtension {
+    private fun getBaseExtension(project: Project): BaseExtension {
         val plugin = project.plugins.getPlugin(AppPlugin::class.java)
-        if (com.android.builder.model.Version.ANDROID_GRADLE_PLUGIN_VERSION == "3.0.0") {
+        return if (
+                ANDROID_GRADLE_PLUGIN_VERSION == "3.0.0") {
             val method = BasePlugin::class.declaredFunctions.first { it.name == "getExtension" }
             method.isAccessible = true
-            return method.call(plugin) as BaseExtension
+            method.call(plugin) as BaseExtension
         } else {
-            return project.extensions.getByName("android") as BaseExtension
+            project.extensions.getByName("android") as BaseExtension
         }
     }
 

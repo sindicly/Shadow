@@ -1,7 +1,7 @@
 apply from: '../apk-module-common.gradle'
 
 dependencies {
-    implementation 'com.android.support:multidex:1.0.2'
+    implementation 'androidx.multidex:multidex:2.0.0'
     compileOnly 'com.tencent.shadow.core:runtime-debug'
     compileOnly 'com.tencent.shadow.core:activity-container-debug'
 }
