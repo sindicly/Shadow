@@ -29,7 +29,7 @@ import java.util.concurrent.Future;
  */
 public interface PluginManagerUpdater {
     /**
-     * @return <code>true</code>表示之前更新过程中意外中断了
+     * @return <FastPluginManager code>true</code>表示之前更新过程中意外中断了
      */
     boolean wasUpdating();
 
