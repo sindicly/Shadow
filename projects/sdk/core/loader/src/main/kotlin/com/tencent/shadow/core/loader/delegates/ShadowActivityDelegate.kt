@@ -90,7 +90,7 @@ class ShadowActivityDelegate(private val mDI: DI) : GeneratedShadowActivityDeleg
         mBusinessName = pluginInitBundle.getString(CM_BUSINESS_NAME_KEY, "")
         val partKey = pluginInitBundle.getString(CM_PART_KEY)!!
         mPartKey = partKey
-        mDI.inject(this, partKey)
+        mDI. inject(this, partKey)
         mDependenciesInjected = true
 
         mMixResources = MixResources(mHostActivityDelegator.superGetResources(), mPluginResources)

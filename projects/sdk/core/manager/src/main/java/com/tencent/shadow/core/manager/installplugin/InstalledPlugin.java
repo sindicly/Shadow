@@ -32,6 +32,7 @@ import java.util.Map;
  *
  * @author owenguo
  */
+
 public class InstalledPlugin implements Serializable {
 
     /**

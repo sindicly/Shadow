@@ -189,6 +189,7 @@ abstract class ShadowPluginLoader(hostAppContext: Context) : DelegateProvider, D
     override fun inject(delegate: ShadowDelegate, partKey: String) {
         mLock.withLock {
             val pluginParts = mPluginPartsMap[partKey]
+            println(pluginParts)
             if (pluginParts == null) {
                 throw IllegalStateException("partKey==${partKey}在map中找不到。此时map：${mPluginPartsMap}")
             } else {
