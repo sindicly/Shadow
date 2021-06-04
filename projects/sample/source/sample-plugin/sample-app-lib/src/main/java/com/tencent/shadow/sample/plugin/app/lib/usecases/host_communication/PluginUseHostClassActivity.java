@@ -23,6 +23,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.tencent.shadow.sample.host.lib.AuthService;
 import com.tencent.shadow.sample.host.lib.HostUiLayerProvider;
 import com.tencent.shadow.sample.plugin.app.lib.gallery.BaseActivity;
 import com.tencent.shadow.sample.plugin.app.lib.gallery.cases.entity.UseCase;
@@ -54,7 +55,8 @@ public class PluginUseHostClassActivity extends BaseActivity {
         HostUiLayerProvider hostUiLayerProvider = HostUiLayerProvider.getInstance();
         View hostUiLayer = hostUiLayerProvider.buildHostUiLayer();
         linearLayout.addView(hostUiLayer);
-
+        System.out.println("我可以拿到在宿主写的类"+AuthService.class);
         setContentView(linearLayout);
+
     }
 }
