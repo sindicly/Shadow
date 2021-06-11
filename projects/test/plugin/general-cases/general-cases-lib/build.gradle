@@ -29,6 +29,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(':custom-view')
+    implementation 'org.jetbrains:annotations-java5:15.0'
 
     compileOnly 'androidx.test.espresso:espresso-idling-resource:3.3.0'
 
